@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMD COMPANY</title>
+    <link rel="stylesheet" href="style5.css">
+    <link rel="icon" type="image/png" href="logo1.png">
+</head>
+<body>
+    <div class="top-bar">
+  
+        <a href="https://www.linkedin.com/in/tu-perfil" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:gerencia@amdcompany.com" aria-label="Correo">
+            <i class="far fa-envelope"></i>
+        </a>
+        <a href="https://wa.me/51943792230" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        
+        
+
+    </div>
+
+    <nav>
+        <a href="Index.html" class="logo">
+            <img src="logo_final.jpg" alt="AMD Logo" class="logo">
+        </a>
+        <ul>
+            <li><a href="Index.html">INICIO</a></li>
+            <li><a href="quienes_somos.html">QUIÉNES SOMOS</a></li>
+            <li><a href="que_hacemos.html">QUÉ HACEMOS</a></li>
+            <li><a href="proyectos.html">SERVICIOS</a></li>
+            <li><a href="Contacto.html">CONTACTO</a></li>
+        </ul>
+    </nav>
+
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="map-container">
+            <h2>Dirección</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.1642297759704!2d-76.97453852966042!3d-12.100907116674179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c7a1605cd229%3A0x279e311ff98e3348!2sC.%20Los%20Tulipanes%20%26%20Av%20La%20Encalada%2C%20Santiago%20de%20Surco%2015023!5e0!3m2!1ses-419!2spe!4v1731723614078!5m2!1ses-419!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+        <div class="form-container">
+            <h2>Contacte con nosotros</h2>
+            <form id="contactForm" onsubmit="handleSubmit(event)" action="#" method="post">
+                <label for="nombre">Nombre *</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="apellidos">Apellidos *</label>
+                <input type="text" id="apellidos" name="apellidos" required>
+
+                <label for="telefono">Teléfono *</label>
+                <input type="tel" id="telefono" name="telefono" required>
+
+                <label for="correo">Correo electrónico *</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="comentarios">Comentarios *</label>
+                <textarea id="comentarios" name="comentarios" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+            <div id="confirmationMessage" style="display:none; margin-top: 10px; color: green;">
+                ¡Mensaje enviado correctamente!
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevenir el envío del formulario
+
+            const formData = {
+                nombre: document.getElementById("nombre").value,
+                apellidos: document.getElementById("apellidos").value,
+                telefono: document.getElementById("telefono").value,
+                correo: document.getElementById("correo").value,
+                comentarios: document.getElementById("comentarios").value,
+            };
+
+            // Simulación del envío (puedes reemplazarlo por una llamada a tu servidor)
+            console.log("Datos enviados:", formData);
+
+            // Mostrar el mensaje de confirmación
+            const confirmationMessage = document.getElementById("confirmationMessage");
+            confirmationMessage.style.display = "block";
+
+            // Limpiar el formulario
+            document.getElementById("contactForm").reset();
+        }
+    </script>
+
+<footer class="footer">
+    <div class="footer-content">
+        <img src="image__4_-removebg-preview.png" alt="VQ Ingeniería Logo" class="footer-logo">
+        <div class="footer-info">
+            <div class="footer-column">
+                <i class="fas fa-phone"></i>
+                <h3>Teléfono de contacto:</h3>
+                <p>(+51) 943792230</p>
+                <a href="https://wa.me/51943792230" target="_blank" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i> (+51) 943792230
+                </a>
+            </div>
+            
+            
+            <div class="footer-column">
+                
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Dirección</h3>
+                <p> La Encalada Esq. Tulipanes  ​<br>2-Urb. El Polo Hunt<br>Santiago de Surco-Lima Perú</p>
+                <br>
+                <p> Av. Miguel Grau No. 715  ​<br>Of. 501<br>Barranco-Lima Perú</p>
+            </div>
+            <div class="footer-column">
+                <i class="fas fa-envelope"></i>
+                <h3>Correo electrónico</h3>
+                <p>gerencia@amdcompany.com</p>
+                <p>operaciones@amdcompany.com</p>
+
+                <div class="social-icons">
+                    <a href="" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                
+                    <!-- Enlace al correo electrónico -->
+                    <a href="gerencia@amdcompany.com" aria-label="Email">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
+
